@@ -1,1 +1,15 @@
+@import url('./reset.css');
 @import url('./home.css');
+@import url('./navigation.css');
+
+/* .section {
+	max-width: 1600px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+} */
+
+#root {
+	background-image: url('../public/Images/background.jpg');
+}
