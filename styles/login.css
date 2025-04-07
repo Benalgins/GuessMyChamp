@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 50%;
 }
 .field {
 	font-family: 'Bangers', system-ui;
@@ -37,4 +38,17 @@
 	justify-content: center;
 	max-width: 800px;
 	gap: 10px;
+
+	label {
+		font-family: 'Bangers', system-ui;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 20px;
+		color: #d4af37;
+		/* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
+		letter-spacing: 1.5px;
+	}
+	input {
+		border-radius: 5px;
+	}
 }
