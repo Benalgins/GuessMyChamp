@@ -8,11 +8,21 @@ export default function Navigation() {
 					</div>
 				</div>
 				<nav className="nav">
-					<p>Leaderboard</p>
-					<p>Catalog</p>
-					<p>Details</p>
-					<p>Login</p>
-					<p>Register</p>
+					<a href="#">
+						<p>Leaderboard</p>
+					</a>
+					<a href="#">
+						<p>Catalog</p>
+					</a>
+					<a href="#">
+						<p>Details</p>
+					</a>
+					<a href="/login">
+						<p>Login</p>
+					</a>
+					<a href="/register">
+						<p>Register</p>
+					</a>
 				</nav>
 			</div>
 		</div>

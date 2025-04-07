@@ -18,7 +18,17 @@
 
 	.nav {
 		display: flex;
-		/* justify-content: space-around; */
 		gap: 20px;
+		a {
+			text-decoration: none;
+		}
+		p {
+			font-family: 'Bangers', system-ui;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 20px;
+			color: #d4af37;
+			letter-spacing: 2.5px;
+		}
 	}
 }
