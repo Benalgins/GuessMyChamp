@@ -3,15 +3,20 @@
 @import url('./reset.css');
 @import url('./home.css');
 @import url('./navigation.css');
+@import url('./login.css');
 
-/* .section {
+.section {
 	max-width: 1600px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-} */
+}
 
 #root {
 	background-image: url('../public/Images/background.jpg');
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
 }

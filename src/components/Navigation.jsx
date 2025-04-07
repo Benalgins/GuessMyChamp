@@ -2,11 +2,11 @@ export default function Navigation() {
 	return (
 		<div className="section navigation">
 			<div className="navigation">
-				<div className="logo-container">
+				<a className="logo-container" href="/">
 					<div className="logo">
 						<img src="../public/images/logo.png" alt="" />
 					</div>
-				</div>
+				</a>
 				<nav className="nav">
 					<a href="#">
 						<p>Leaderboard</p>
