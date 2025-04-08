@@ -1,0 +1,25 @@
+.catalog-content {
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	flex-direction: column;
+
+	.title {
+		h2,
+		p {
+			font-family: 'Bangers', system-ui;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 25px;
+			color: #d4af37;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+			letter-spacing: 3.5px;
+		}
+		p {
+			font-size: 18px;
+			span {
+				color: red;
+			}
+		}
+	}
+}

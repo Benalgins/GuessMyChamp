@@ -5,6 +5,7 @@
 @import url('./navigation.css');
 @import url('./login.css');
 @import url('./addChampion.css');
+@import url('./catalog.css');
 
 .section {
 	max-width: 1600px;

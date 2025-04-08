@@ -11,7 +11,7 @@ export default function Navigation() {
 					<a href="#">
 						<p>Leaderboard</p>
 					</a>
-					<a href="#">
+					<a href="/catalog">
 						<p>Catalog</p>
 					</a>
 					<a href="#">

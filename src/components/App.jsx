@@ -6,6 +6,7 @@ import Login from './Login';
 import Register from './Register';
 import Cookies from 'js-cookie';
 import AddChampion from './AddChampion';
+import Catalog from './Catalog/Catalog';
 
 const token = Cookies.get('userId');
 
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/add-champion" element={<AddChampion />} />
+				<Route path="/catalog" element={<Catalog />} />
 			</Routes>
 		</>
 	);
