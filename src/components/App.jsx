@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Router, Routes } from 'react-router-dom';
 
 import Home from './Home';
 import Navigation from './Navigation';
@@ -7,6 +7,7 @@ import Register from './Register';
 import Cookies from 'js-cookie';
 import AddChampion from './AddChampion';
 import Catalog from './Catalog/Catalog';
+import Leaderboard from './Leaderboard/Leaderboard';
 
 const token = Cookies.get('userId');
 
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/register" element={<Register />} />
 				<Route path="/add-champion" element={<AddChampion />} />
 				<Route path="/catalog" element={<Catalog />} />
+				<Route path="/leaderboard" element={<Leaderboard />} />
 			</Routes>
 		</>
 	);

@@ -27,8 +27,8 @@ export default function Catalog() {
 					</p>
 				</div>
 				<div className="all-champions">
-					{champions.map((champion, index) => (
-						<ChampionDisplay key={index} name={champion} />
+					{champions.map((champion) => (
+						<ChampionDisplay key={champion} name={champion} />
 					))}
 				</div>
 			</div>

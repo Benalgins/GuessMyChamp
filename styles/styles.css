@@ -6,6 +6,7 @@
 @import url('./login.css');
 @import url('./addChampion.css');
 @import url('./catalog.css');
+@import url('./leaderboard.css');
 
 .section {
 	max-width: 1600px;
@@ -21,4 +22,5 @@
 	flex-direction: column;
 	justify-content: start;
 	align-items: center;
+	overflow-y: auto;
 }

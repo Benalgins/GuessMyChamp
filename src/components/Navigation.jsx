@@ -8,7 +8,7 @@ export default function Navigation() {
 					</div>
 				</a>
 				<nav className="nav">
-					<a href="#">
+					<a href="/leaderboard">
 						<p>Leaderboard</p>
 					</a>
 					<a href="/catalog">
