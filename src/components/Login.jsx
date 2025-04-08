@@ -15,10 +15,11 @@ export default function Login() {
 				},
 				body: JSON.stringify({ email, password }),
 			});
+			const data = await response.json();
 			if (response.ok) {
-				alert('Login successful');
+				alert(`Login successful: ${data.message}`);
 			} else {
-				alert('Login failed');
+				alert(`Login failed: ${data.message || 'Unknown error'}`);
 			}
 		} catch (error) {
 			console.error('Request failed', err);

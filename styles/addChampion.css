@@ -1,0 +1,32 @@
+.addChampion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	.title {
+		h2 {
+			font-family: 'Bangers', system-ui;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 40px;
+			color: #d4af37;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+			letter-spacing: 3.5px;
+		}
+	}
+}
+
+.addChampion-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	label {
+		font-family: 'Bangers', system-ui;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 25px;
+		color: #d4af37;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+		letter-spacing: 3.5px;
+	}
+}

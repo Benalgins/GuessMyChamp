@@ -17,6 +17,9 @@ export default function Navigation() {
 					<a href="#">
 						<p>Details</p>
 					</a>
+					<a href="/add-champion">
+						<p>Add Champion</p>
+					</a>
 					<a href="/login">
 						<p>Login</p>
 					</a>
