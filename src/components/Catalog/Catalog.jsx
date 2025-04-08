@@ -1,6 +1,21 @@
+import React, { useEffect, useState } from 'react';
+import ChampionDisplay from './Champion-display';
+
 export default function Catalog() {
-	const URL =
-		'https://ddragon.leagueoflegends.com/cdn/15.7.1/data/en_US/champion.json';
+	const [champions, setChampions] = useState([]);
+
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await fetch('http://localhost:5000/catalog');
+				const results = await response.json();
+				setChampions(results.map((champion) => champion.name));
+			} catch (error) {
+				console.error('Request failed', error);
+			}
+		}
+		fetchData();
+	}, []);
 	return (
 		<div className="section catalog">
 			<div className="catalog-content">
@@ -12,7 +27,9 @@ export default function Catalog() {
 					</p>
 				</div>
 				<div className="all-champions">
-					<div className="champions"></div>
+					{champions.map((champion, index) => (
+						<ChampionDisplay key={index} name={champion} />
+					))}
 				</div>
 			</div>
 		</div>
