@@ -1,8 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [alert, setAlert] = useState({ show: false, message: '', type: '' });
+
+	const navigate = useNavigate();
+	useEffect(() => {
+		let timer;
+		if (alert.show) {
+			timer = setTimeout(() => {
+				setAlert({ ...alert, show: false });
+			}, 1000);
+		}
+
+		return () => clearTimeout(timer);
+	}, [alert.show]);
+
+	const showAlert = (message, type) => {
+		setAlert({ show: true, message, type });
+	};
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
@@ -17,17 +35,24 @@ export default function Login() {
 			});
 			const data = await response.json();
 			if (response.ok) {
-				alert(`Login successful: ${data.message}`);
+				showAlert(`Login successful: ${data.message}`, 'success');
+				setTimeout(() => navigate('/'), 1000);
 			} else {
-				alert(`Login failed: ${data.message || 'Unknown error'}`);
+				showAlert(`Login failed: ${data.message || 'Unknown error'}`, 'error');
 			}
 		} catch (error) {
-			console.error('Request failed', err);
+			console.error('Request failed', error);
+			showAlert('Request failed', 'error');
 		}
 	};
 
 	return (
 		<div className="section login">
+			{alert.show && (
+				<div className={`alert-container ${alert.type}`}>
+					<p>{alert.message}</p>
+				</div>
+			)}
 			<div className="login-container">
 				<h2>Login</h2>
 				<form className="login-form" onSubmit={handleLogin}>

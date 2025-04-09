@@ -13,7 +13,6 @@ export default function UserDisplay({ username, points, index }) {
 	];
 	//TODO s obekt i importove
 	const imageUrl = `../../../public/Images/${divisionImages[index]}`;
-	console.log(index);
 	return (
 		<div className="user-box">
 			<div className="devision">

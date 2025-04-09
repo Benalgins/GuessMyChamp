@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 @import url('./reset.css');
+@import url('./alert-container.css');
 @import url('./home.css');
 @import url('./navigation.css');
 @import url('./login.css');
 @import url('./addChampion.css');
 @import url('./catalog.css');
 @import url('./leaderboard.css');
+@import url('./myChampions.css');
 
 .section {
 	max-width: 1600px;
@@ -17,7 +19,7 @@
 }
 
 #root {
-	background-image: url('../public/Images/background.jpg');
+	background-image: url('/Images/background.jpg');
 	display: flex;
 	flex-direction: column;
 	justify-content: start;

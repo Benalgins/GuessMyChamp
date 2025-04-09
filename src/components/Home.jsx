@@ -3,7 +3,7 @@ function Home() {
 		<div className="section home">
 			<div className="about">
 				<div className="wellcome-img">
-					<img src="../../public/Images/wellcome-pengu.png" alt="" />
+					<img src="/Images/wellcome-pengu.png" alt="" />
 				</div>
 				<p>
 					Wellcome to GuessMychamp, if your a loving fan of League of Legends
