@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import ChampionProfile from './Champion-profile';
+import PORT from '../../config/config';
 
 export default function MyChampions() {
 	const [userChampions, setUserChampions] = useState([]);
+
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await fetch('http://localhost:5000/my-champions', {
+				const response = await fetch(`${PORT}/my-champions`, {
 					method: 'GET',
 					credentials: 'include',
 				});
@@ -25,14 +27,16 @@ export default function MyChampions() {
 	}, []);
 
 	const handleDelete = async (championId) => {
+		const confirmDelete = window.confirm(
+			'Are you sure you want to delete this champion? This will also remove 10 points!'
+		);
+
+		if (!confirmDelete) return;
 		try {
-			const response = await fetch(
-				`http://localhost:5000/champions/${championId}`,
-				{
-					method: 'DELETE',
-					credentials: 'include',
-				}
-			);
+			const response = await fetch(`${PORT}/${championId}`, {
+				method: 'DELETE',
+				credentials: 'include',
+			});
 			if (response.ok) {
 				setUserChampions((prev) =>
 					prev.filter((champ) => champ._id !== championId)

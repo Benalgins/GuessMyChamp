@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ChampionDisplay from './Champion-display';
+import PORT from '../../config/config';
 
 export default function Catalog() {
 	const [champions, setChampions] = useState([]);
@@ -7,7 +8,7 @@ export default function Catalog() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await fetch('http://localhost:5000/catalog');
+				const response = await fetch(`${PORT}/catalog`);
 				const results = await response.json();
 				setChampions(results.map((champion) => champion.name));
 			} catch (error) {

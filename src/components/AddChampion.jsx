@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PORT from '../config/config';
 
 export default function AddChampion() {
 	const [championsName, setChampionsName] = useState('');
@@ -17,7 +18,7 @@ export default function AddChampion() {
 		};
 
 		try {
-			const response = await fetch('http://localhost:5000/add-champion', {
+			const response = await fetch(`${PORT}/add-champion`, {
 				method: 'POST',
 				credentials: 'include',
 				headers: {

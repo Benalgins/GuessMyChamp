@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import UserDisplay from './User-display';
+import PORT from '../../config/config';
 
 export default function Leaderboard() {
 	const [users, setUsers] = useState([]);
@@ -7,7 +8,7 @@ export default function Leaderboard() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await fetch('http://localhost:5000/leaderboard');
+				const response = await fetch(`${PORT}/leaderboard`);
 				const results = await response.json();
 				setUsers(results.map((user) => user));
 			} catch (error) {

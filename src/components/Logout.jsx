@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import PORT from '../config/config';
 
 export default function Logout() {
 	const navigate = useNavigate();
 
 	const handleLogout = async () => {
 		try {
-			const response = await fetch('http://localhost:5000/logout', {
+			const response = await fetch(`${PORT}/logout`, {
 				method: 'POST',
 				credentials: 'include',
 			});
