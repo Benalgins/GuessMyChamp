@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import PORT from '../config/config';
+import AlertBox from './Alertbox';
 
 export default function AddChampion() {
 	const [championsName, setChampionsName] = useState('');
 	const [championsPosition, setChampionsPosition] = useState('');
 	const [championsGender, setChampionsGender] = useState('');
 	const [championsYear, setChampionsYear] = useState('');
+	const [alert, setAlert] = useState({ show: false, message: '', type: '' });
+
+	const showAlert = (message, type) => {
+		setAlert({ show: true, message, type });
+	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -29,9 +35,9 @@ export default function AddChampion() {
 
 			const data = await response.json();
 			if (response.ok) {
-				alert(`${data.message}`);
+				showAlert(`${data.message}`, 'success');
 			} else {
-				alert(`${data.message}`);
+				showAlert(`${data.message}`, 'error');
 			}
 		} catch (error) {
 			console.error('Request failed', error);
@@ -40,6 +46,10 @@ export default function AddChampion() {
 
 	return (
 		<div className="section addChampion">
+			<AlertBox
+				alert={alert}
+				onClose={() => setAlert({ ...alert, show: false })}
+			/>
 			<div className="title">
 				<h2>Add Champion to the Pool!</h2>
 			</div>

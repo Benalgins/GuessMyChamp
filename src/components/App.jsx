@@ -4,12 +4,10 @@ import Home from './Home';
 import Navigation from './Navigation';
 import Login from './Login';
 import Register from './Register';
-import Cookies from 'js-cookie';
 import AddChampion from './AddChampion';
 import Catalog from './Catalog/Catalog';
 import Leaderboard from './Leaderboard/Leaderboard';
 import MyChampions from './MyChampions/MyChampions';
-import Logout from './Logout';
 import ChampionEdit from './MyChampions/Champion-edit';
 import { AuthContext } from './AuthContex';
 import { useContext } from 'react';
@@ -33,7 +31,7 @@ function App() {
 					<>
 						<Route path="/add-champion" element={<AddChampion />} />
 						<Route path="/my-champions" element={<MyChampions />} />
-						<Route path="/logout" element={<Logout />} />
+						{/* <Route path="/logout" element={<Logout />} /> */}
 						<Route
 							path="champions/edit/:championId"
 							element={<ChampionEdit />}

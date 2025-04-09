@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { AuthContext } from './AuthContex';
-
+import { AuthContext } from '../components/AuthContex';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PORT from '../config/config';
 
-export default function Logout() {
+export function useLogoutHandler() {
 	const navigate = useNavigate();
 	const { setIsAuthenticated } = useContext(AuthContext);
 
@@ -29,5 +28,5 @@ export default function Logout() {
 		}
 	};
 
-	return <button onClick={handleLogout}>Logout</button>;
+	return handleLogout;
 }

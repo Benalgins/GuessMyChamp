@@ -44,8 +44,10 @@ export default function Register() {
 				setPassword('');
 				setRepeatpassword('');
 				showAlert(`Register successful: ${data.message}`, 'success');
-				setIsAuthenticated(false);
-				setTimeout(() => navigate('/'), 1000);
+				setTimeout(() => {
+					setIsAuthenticated(true);
+					navigate('/');
+				}, 1000);
 			} else {
 				showAlert(`Login failed: ${data.message || 'Unknown error'}`, 'error');
 			}

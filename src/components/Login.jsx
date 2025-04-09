@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthContex';
 import PORT from '../config/config';
+import AlertBox from './Alertbox';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
@@ -39,8 +40,10 @@ export default function Login() {
 			const data = await response.json();
 			if (response.ok) {
 				showAlert(`Login successful: ${data.message}`, 'success');
-				setIsAuthenticated(true);
-				setTimeout(() => navigate('/'), 1000);
+				setTimeout(() => {
+					setIsAuthenticated(true);
+					navigate('/');
+				}, 1000);
 			} else {
 				showAlert(`Login failed: ${data.message || 'Unknown error'}`, 'error');
 			}
@@ -52,11 +55,10 @@ export default function Login() {
 
 	return (
 		<div className="section login">
-			{alert.show && (
-				<div className={`alert-container ${alert.type}`}>
-					<p>{alert.message}</p>
-				</div>
-			)}
+			<AlertBox
+				alert={alert}
+				onClose={() => setAlert({ ...alert, show: false })}
+			/>
 			<div className="login-container">
 				<h2>Login</h2>
 				<form className="login-form" onSubmit={handleLogin}>
