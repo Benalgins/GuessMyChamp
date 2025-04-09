@@ -75,6 +75,7 @@ export default function MyChampions() {
 								gender={champions.gender}
 								releaseYear={champions.releaseYear}
 								onDelete={handleDelete}
+								// onEdit={handleEdit}
 							/>
 						))
 					)}

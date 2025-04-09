@@ -10,6 +10,7 @@ import Catalog from './Catalog/Catalog';
 import Leaderboard from './Leaderboard/Leaderboard';
 import MyChampions from './MyChampions/MyChampions';
 import Logout from './Logout';
+import ChampionEdit from './MyChampions/Champion-edit';
 
 const token = Cookies.get('userId');
 
@@ -26,6 +27,7 @@ function App() {
 				<Route path="/leaderboard" element={<Leaderboard />} />
 				<Route path="/my-champions" element={<MyChampions />} />
 				<Route path="/logout" element={<Logout />} />
+				<Route path="champions/edit/:championId" element={<ChampionEdit />} />
 			</Routes>
 		</>
 	);

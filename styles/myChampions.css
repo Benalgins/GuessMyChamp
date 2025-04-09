@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 30px;
 
 	.title {
 		display: flex;
@@ -45,33 +46,40 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: 50px;
+	justify-content: space-between;
 	border: 5px solid #d4af37;
 	border-radius: 5px;
-	.description {
+	padding: 10px 30px 10px 10px;
+	background-color: rgba(0, 0, 0, 0.537);
+	.champion-profile-container {
 		display: flex;
-		gap: 20px;
-
-		.name,
-		.gender,
-		.yearOfRelease,
-		.lane {
+		align-items: center;
+		gap: 30px;
+		.description {
 			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		h3,
-		h2 {
-			font-family: 'Bangers', system-ui;
-			font-weight: 400;
-			font-style: normal;
-			font-size: 30px;
-			color: #d4af37;
-			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-			letter-spacing: 3.5px;
-		}
-		h2 {
-			color: #d43737;
+			gap: 20px;
+
+			.name,
+			.gender,
+			.yearOfRelease,
+			.lane {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			h3,
+			h2 {
+				font-family: 'Bangers', system-ui;
+				font-weight: 400;
+				font-style: normal;
+				font-size: 30px;
+				color: #d4af37;
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+				letter-spacing: 3.5px;
+			}
+			h2 {
+				color: #d43737;
+			}
 		}
 	}
 }
@@ -88,5 +96,33 @@
 		color: #15cedb;
 		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 		letter-spacing: 3.5px;
+	}
+}
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	button {
+		padding: 10px;
+		width: 75px;
+		background-color: rgba(70, 67, 154, 0.224);
+		color: red;
+		font-family: 'Bangers', system-ui;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 15px;
+		border: 2px solid #d4af3771;
+		border-radius: 5px;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+		letter-spacing: 3.5px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.edit-btn {
+		text-decoration: none;
+		color: orange;
+	}
+	button:hover {
+		background-color: rgba(50, 35, 187, 0.697);
 	}
 }
