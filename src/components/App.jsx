@@ -11,23 +11,39 @@ import Leaderboard from './Leaderboard/Leaderboard';
 import MyChampions from './MyChampions/MyChampions';
 import Logout from './Logout';
 import ChampionEdit from './MyChampions/Champion-edit';
-
-const token = Cookies.get('userId');
+import { AuthContext } from './AuthContex';
+import { useContext } from 'react';
+import Demo from './Demo-run/Demo';
 
 function App() {
+	const { isAuthenticated } = useContext(AuthContext);
+	console.log(isAuthenticated);
 	return (
 		<>
 			<Navigation />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/add-champion" element={<AddChampion />} />
+				<Route path="/login" element={isAuthenticated ? <Home /> : <Login />} />
+				<Route
+					path="/register"
+					element={isAuthenticated ? <Home /> : <Register />}
+				/>
+
+				{isAuthenticated && (
+					<>
+						<Route path="/add-champion" element={<AddChampion />} />
+						<Route path="/my-champions" element={<MyChampions />} />
+						<Route path="/logout" element={<Logout />} />
+						<Route
+							path="champions/edit/:championId"
+							element={<ChampionEdit />}
+						/>
+					</>
+				)}
+
 				<Route path="/catalog" element={<Catalog />} />
 				<Route path="/leaderboard" element={<Leaderboard />} />
-				<Route path="/my-champions" element={<MyChampions />} />
-				<Route path="/logout" element={<Logout />} />
-				<Route path="champions/edit/:championId" element={<ChampionEdit />} />
+				<Route path="/demo" element={<Demo />} />
 			</Routes>
 		</>
 	);

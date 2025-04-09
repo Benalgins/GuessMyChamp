@@ -9,6 +9,7 @@
 @import url('./catalog.css');
 @import url('./leaderboard.css');
 @import url('./myChampions.css');
+@import url('./demo.css');
 
 .section {
 	max-width: 1600px;

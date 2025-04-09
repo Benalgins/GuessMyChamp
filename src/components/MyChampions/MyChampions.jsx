@@ -33,7 +33,7 @@ export default function MyChampions() {
 
 		if (!confirmDelete) return;
 		try {
-			const response = await fetch(`${PORT}/${championId}`, {
+			const response = await fetch(`${PORT}/champions/${championId}`, {
 				method: 'DELETE',
 				credentials: 'include',
 			});

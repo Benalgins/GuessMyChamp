@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from './AuthContex';
 import PORT from '../config/config';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [alert, setAlert] = useState({ show: false, message: '', type: '' });
+	const { setIsAuthenticated } = useContext(AuthContext);
 
 	const navigate = useNavigate();
 	useEffect(() => {
@@ -37,6 +39,7 @@ export default function Login() {
 			const data = await response.json();
 			if (response.ok) {
 				showAlert(`Login successful: ${data.message}`, 'success');
+				setIsAuthenticated(true);
 				setTimeout(() => navigate('/'), 1000);
 			} else {
 				showAlert(`Login failed: ${data.message || 'Unknown error'}`, 'error');

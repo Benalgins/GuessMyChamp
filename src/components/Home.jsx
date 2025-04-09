@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Home() {
 	return (
 		<div className="section home">
@@ -18,7 +20,9 @@ function Home() {
 			</div>
 			<div className="try-demo">
 				<p>Jump in and take a demo run at guessing champions</p>
-				<button>Demo Run</button>
+				<Link className={'link-demo'} to={`/demo`}>
+					<button className="edit-btn">Demo Run</button>
+				</Link>
 			</div>
 		</div>
 	);

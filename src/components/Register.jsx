@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from './AuthContex';
+
 import PORT from '../config/config';
 
 export default function Register() {
@@ -7,6 +9,7 @@ export default function Register() {
 	const [password, setPassword] = useState('');
 	const [repeatPassword, setRepeatpassword] = useState('');
 	const [alert, setAlert] = useState({ show: false, message: '', type: '' });
+	const { setIsAuthenticated } = useContext(AuthContext);
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -41,6 +44,7 @@ export default function Register() {
 				setPassword('');
 				setRepeatpassword('');
 				showAlert(`Register successful: ${data.message}`, 'success');
+				setIsAuthenticated(false);
 				setTimeout(() => navigate('/'), 1000);
 			} else {
 				showAlert(`Login failed: ${data.message || 'Unknown error'}`, 'error');
