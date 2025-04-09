@@ -58,47 +58,49 @@ export default function Register() {
 	};
 
 	return (
-		<div className="register">
+		<div className="section register">
 			{alert.show && (
 				<div className={`alert-container ${alert.type}`}>
 					<p>{alert.message}</p>
 				</div>
 			)}
-			<h2>Register on our website</h2>
 			<div className="register-container">
-				<form onSubmit={handleSubmit}>
-					<label htmlFor="email">Email:</label>
-					<input
-						type="email"
-						id="email"
-						name="email"
-						placeholder="Email"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						required
-					/>
-					<label htmlFor="login-password">Password:</label>
-					<input
-						type="password"
-						id="login-password"
-						name="password"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-						required
-						placeholder="Password"
-					/>
-					<label htmlFor="repeat-password">Repeat Password:</label>
-					<input
-						type="password"
-						id="repeatPassword"
-						name="repeatPassword"
-						value={repeatPassword}
-						onChange={(e) => setRepeatpassword(e.target.value)}
-						required
-						placeholder="Repeat Password"
-					/>
-					<input type="submit" className="btn submit" value="Register" />
-				</form>
+				<div className="register-content">
+					<h2>Register on our website</h2>
+					<form onSubmit={handleSubmit}>
+						<label htmlFor="email">Email:</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Email"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+							required
+						/>
+						<label htmlFor="login-password">Password:</label>
+						<input
+							type="password"
+							id="login-password"
+							name="password"
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+							required
+							placeholder="Password"
+						/>
+						<label htmlFor="repeat-password">Repeat Password:</label>
+						<input
+							type="password"
+							id="repeatPassword"
+							name="repeatPassword"
+							value={repeatPassword}
+							onChange={(e) => setRepeatpassword(e.target.value)}
+							required
+							placeholder="Repeat Password"
+						/>
+						<input type="submit" className="btn submit" value="Register" />
+					</form>
+				</div>
 			</div>
 		</div>
 	);

@@ -2,53 +2,107 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 50%;
-}
-.field {
-	font-family: 'Bangers', system-ui;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 20px;
-	color: #d4af37;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-	letter-spacing: 1.5px;
-	a {
-		text-decoration: none;
-		color: red;
-	}
-}
-.login-container {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	gap: 15px;
-	h2 {
-		font-family: 'Bangers', system-ui;
-		font-weight: 400;
-		font-style: normal;
-		font-size: 40px;
-		color: #d4af37;
-		letter-spacing: 3.5px;
+	justify-content: center;
+	margin-top: 60px;
+
+	.login-container {
+		background: rgba(0, 0, 0, 0.6);
+		padding: 40px;
+		border-radius: 16px;
+		box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+		backdrop-filter: blur(10px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		animation: fadeInUp 0.8s ease forwards;
+		max-width: 450px;
+		width: 100%;
+
+		h2 {
+			font-family: 'Bangers', system-ui;
+			font-size: 36px;
+			color: #d4af37;
+			text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+			letter-spacing: 2px;
+		}
 	}
 }
 
 .login-form {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	max-width: 800px;
-	gap: 10px;
+	gap: 20px;
+	width: 100%;
 
 	label {
 		font-family: 'Bangers', system-ui;
-		font-weight: 400;
-		font-style: normal;
 		font-size: 20px;
-		color: #d4af37;
-		/* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
-		letter-spacing: 1.5px;
+		color: #f1c40f;
+		text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 	}
-	input {
-		border-radius: 5px;
+}
+
+.login-form input[type='email'],
+.login-form input[type='password'] {
+	width: 100%;
+	padding: 12px;
+	font-size: 18px;
+	border-radius: 8px;
+	border: 1px solid #d4af37;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+	outline: none;
+	box-shadow: 0 0 10px #d4af37;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn.submit {
+	background-color: #d4af37;
+	color: #1c1c1c;
+	font-weight: bold;
+	border: none;
+	padding: 12px 20px;
+	cursor: pointer;
+	border-radius: 8px;
+	font-size: 20px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.submit:hover {
+	background-color: #f1c40f;
+	transform: scale(1.05);
+}
+
+/* Подтекст под формата */
+.field {
+	font-family: 'Bangers', system-ui;
+	font-size: 18px;
+	color: #f1c40f;
+	text-align: center;
+}
+
+.field a {
+	text-decoration: underline;
+	color: #ff5555;
+	transition: color 0.3s ease;
+}
+
+.field a:hover {
+	color: #ff8888;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
