@@ -33,3 +33,60 @@
 		}
 	}
 }
+
+.champions-box {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.champion-profile {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 50px;
+	border: 5px solid #d4af37;
+	border-radius: 5px;
+	.description {
+		display: flex;
+		gap: 20px;
+
+		.name,
+		.gender,
+		.yearOfRelease,
+		.lane {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		h3,
+		h2 {
+			font-family: 'Bangers', system-ui;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 30px;
+			color: #d4af37;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+			letter-spacing: 3.5px;
+		}
+		h2 {
+			color: #d43737;
+		}
+	}
+}
+
+.missing-content {
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+	h2 {
+		font-family: 'Bangers', system-ui;
+		font-weight: 800;
+		font-style: normal;
+		font-size: 40px;
+		color: #15cedb;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+		letter-spacing: 3.5px;
+	}
+}
