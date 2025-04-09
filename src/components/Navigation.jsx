@@ -14,8 +14,8 @@ export default function Navigation() {
 					<a href="/catalog">
 						<p>Catalog</p>
 					</a>
-					<a href="#">
-						<p>Details</p>
+					<a href="/my-champions">
+						<p>My Champions</p>
 					</a>
 					<a href="/add-champion">
 						<p>Add Champion</p>
@@ -25,6 +25,9 @@ export default function Navigation() {
 					</a>
 					<a href="/register">
 						<p>Register</p>
+					</a>
+					<a href="/logout">
+						<p>Logout</p>
 					</a>
 				</nav>
 			</div>
