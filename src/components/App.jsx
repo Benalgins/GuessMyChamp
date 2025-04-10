@@ -17,7 +17,6 @@ import Error from './Error/Error';
 
 function App() {
 	const { isAuthenticated } = useContext(AuthContext);
-	console.log(isAuthenticated);
 	return (
 		<>
 			<Navigation />

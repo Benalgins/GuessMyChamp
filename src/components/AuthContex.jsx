@@ -8,7 +8,6 @@ export const AuthProvider = ({ children }) => {
 
 	useEffect(() => {
 		const token = Cookies.get('userId');
-		console.log(token);
 		if (token) {
 			setIsAuthenticated(true);
 		} else {

@@ -13,7 +13,6 @@ export default function MyChampions() {
 					credentials: 'include',
 				});
 				const results = await response.json();
-				console.log(results);
 				if (response.ok) {
 					setUserChampions(results.map((user) => user));
 				} else {

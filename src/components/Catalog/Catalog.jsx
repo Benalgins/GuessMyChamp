@@ -10,7 +10,11 @@ export default function Catalog() {
 			try {
 				const response = await fetch(`${PORT}/catalog`);
 				const results = await response.json();
-				setChampions(results.map((champion) => champion.name));
+				setChampions(
+					results
+						.map((champion) => champion.name)
+						.sort((a, b) => a.localeCompare(b))
+				);
 			} catch (error) {
 				console.error('Request failed', error);
 			}
