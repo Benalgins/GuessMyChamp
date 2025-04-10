@@ -63,6 +63,7 @@
 	input[type='text'],
 	input[type='number'] {
 		padding: 10px 15px;
+		font-family: 'Bangers', system-ui;
 		border: 2px solid #d4af37;
 		border-radius: 10px;
 		background: #1a1a1a;
