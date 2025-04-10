@@ -39,6 +39,9 @@ export default function Demo() {
 					gender: guess.gender === hiddenChampion.gender,
 					position: guess.position === hiddenChampion.position,
 					releaseYear: guess.releaseYear === hiddenChampion.releaseYear,
+					resource: guess.resource === hiddenChampion.releaseYear,
+					range: guess.range === hiddenChampion.range,
+					region: guess.region === hiddenChampion.region,
 				},
 			};
 			setGuesses([result, ...guesses]);
@@ -95,6 +98,15 @@ export default function Demo() {
 							className={`box ${guess.correct.releaseYear ? 'green' : 'red'}`}
 						>
 							{guess.releaseYear}
+						</div>
+						<div className={`box ${guess.correct.resource ? 'green' : 'red'}`}>
+							{guess.resource}
+						</div>
+						<div className={`box ${guess.correct.range ? 'green' : 'red'}`}>
+							{guess.range}
+						</div>
+						<div className={`box ${guess.correct.region ? 'green' : 'red'}`}>
+							{guess.region}
 						</div>
 					</div>
 				))}

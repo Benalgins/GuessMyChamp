@@ -48,6 +48,7 @@ function App() {
 				<Route path="/catalog" element={<Catalog />} />
 				<Route path="/leaderboard" element={<Leaderboard />} />
 				<Route path="/demo" element={<Demo />} />
+				<Route path="*" element={<Error />} />
 			</Routes>
 		</>
 	);

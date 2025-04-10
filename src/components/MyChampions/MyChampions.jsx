@@ -73,6 +73,9 @@ export default function MyChampions() {
 								name={champions.name}
 								position={champions.position}
 								gender={champions.gender}
+								range={champions.range}
+								region={champions.region}
+								resource={champions.resource}
 								releaseYear={champions.releaseYear}
 								onDelete={handleDelete}
 								// onEdit={handleEdit}

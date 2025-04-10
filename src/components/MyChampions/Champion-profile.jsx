@@ -4,6 +4,9 @@ export default function ChampionProfile({
 	name,
 	position,
 	gender,
+	resource,
+	region,
+	range,
 	releaseYear,
 	onDelete,
 	onEdit,
@@ -26,13 +29,25 @@ export default function ChampionProfile({
 						<h3>Gender:</h3>
 						<h2>{gender}</h2>
 					</div>
-					<div className="yearOfRelease">
-						<h3>Year of release:</h3>
-						<h2>{releaseYear}</h2>
-					</div>
 					<div className="lane">
 						<h3>Lane:</h3>
 						<h2>{position}</h2>
+					</div>
+					<div className="lane">
+						<h3>Region:</h3>
+						<h2>{region}</h2>
+					</div>
+					<div className="lane">
+						<h3>Resources:</h3>
+						<h2>{resource}</h2>
+					</div>
+					<div className="lane">
+						<h3>Style:</h3>
+						<h2>{range}</h2>
+					</div>
+					<div className="yearOfRelease">
+						<h3>Year of release:</h3>
+						<h2>{releaseYear}</h2>
 					</div>
 				</div>
 			</div>
