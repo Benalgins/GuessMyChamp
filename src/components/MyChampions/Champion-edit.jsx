@@ -162,7 +162,7 @@ export default function ChampionEdit() {
 						required
 					>
 						<option value="" disabled>
-							Select Style
+							Range or Melee
 						</option>
 						<option value="melee">Melee</option>
 						<option value="range">Range</option>

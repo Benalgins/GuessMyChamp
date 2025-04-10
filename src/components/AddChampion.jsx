@@ -124,7 +124,7 @@ export default function AddChampion() {
 						required
 					>
 						<option value="" disabled>
-							Select gender
+							Range or Melee
 						</option>
 						<option value="melee">Melee</option>
 						<option value="range">Range</option>
