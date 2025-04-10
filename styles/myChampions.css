@@ -16,10 +16,10 @@
 			color: #d4af37;
 			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 			letter-spacing: 1.5px;
-			.green {
+			.green-span {
 				color: rgb(101, 249, 101);
 			}
-			.red {
+			.red-span {
 				color: rgb(255, 1, 1);
 			}
 		}

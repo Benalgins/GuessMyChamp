@@ -1,0 +1,64 @@
+.no-user-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.no-user-content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		.no-user-img {
+			animation: fadeInUp 0.8s ease-out;
+		}
+
+		.no-user-title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 40px;
+			background: rgba(0, 0, 0, 0.6);
+			border-radius: 16px;
+			box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+			backdrop-filter: blur(10px);
+			max-width: 450px;
+
+			animation: fadeInUp 0.8s ease-out;
+			gap: 30px;
+
+			.login-register {
+				display: flex;
+				gap: 30px;
+			}
+			h2 {
+				font-family: 'Bangers', system-ui;
+				font-weight: 400;
+				font-size: 40px;
+				font-style: normal;
+				color: #d4af37;
+				letter-spacing: 3.5px;
+				text-align: center;
+			}
+			a {
+				font-family: 'Bangers', system-ui;
+				font-weight: 400;
+				font-size: 40px;
+				font-style: normal;
+				color: #d4af37;
+				letter-spacing: 3.5px;
+				text-decoration: none;
+				border: 2px solid #d4af37;
+				border-radius: 10px;
+				padding: 10px;
+				transition: background-color 0.3s ease;
+			}
+			.login-link:hover {
+				background-color: #ff1702a7;
+				color: rgb(243, 255, 6);
+			}
+			.register-link:hover {
+				background-color: #0832ffa7;
+				color: rgb(243, 255, 6);
+			}
+		}
+	}
+}

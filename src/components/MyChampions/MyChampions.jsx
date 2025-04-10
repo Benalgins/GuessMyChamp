@@ -55,8 +55,8 @@ export default function MyChampions() {
 			<div className="champions-container">
 				<div className="title">
 					<h2>
-						Here you can <span className="green">Update</span> or{' '}
-						<span className="red">Delete</span> the champions you added!
+						Here you can <span className="green-span">Update</span> or{' '}
+						<span className="red-span">Delete</span> the champions you added!
 					</h2>
 					<p>But be carefull , removing a champion also removes the points!</p>
 				</div>

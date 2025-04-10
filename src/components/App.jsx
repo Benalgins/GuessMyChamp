@@ -12,6 +12,8 @@ import ChampionEdit from './MyChampions/Champion-edit';
 import { AuthContext } from './AuthContex';
 import { useContext } from 'react';
 import Demo from './Demo-run/Demo';
+import NoUser from './Error/NoUser';
+import Error from './Error/Error';
 
 function App() {
 	const { isAuthenticated } = useContext(AuthContext);
@@ -21,23 +23,27 @@ function App() {
 			<Navigation />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/login" element={isAuthenticated ? <Home /> : <Login />} />
+				<Route
+					path="/login"
+					element={isAuthenticated ? <Error /> : <Login />}
+				/>
 				<Route
 					path="/register"
-					element={isAuthenticated ? <Home /> : <Register />}
+					element={isAuthenticated ? <Error /> : <Register />}
 				/>
 
-				{isAuthenticated && (
-					<>
-						<Route path="/add-champion" element={<AddChampion />} />
-						<Route path="/my-champions" element={<MyChampions />} />
-						{/* <Route path="/logout" element={<Logout />} /> */}
-						<Route
-							path="champions/edit/:championId"
-							element={<ChampionEdit />}
-						/>
-					</>
-				)}
+				<Route
+					path="/add-champion"
+					element={isAuthenticated ? <AddChampion /> : <NoUser />}
+				/>
+				<Route
+					path="/my-champions"
+					element={isAuthenticated ? <MyChampions /> : <NoUser />}
+				/>
+				<Route
+					path="/champions/edit/:championId"
+					element={isAuthenticated ? <ChampionEdit /> : <NoUser />}
+				/>
 
 				<Route path="/catalog" element={<Catalog />} />
 				<Route path="/leaderboard" element={<Leaderboard />} />

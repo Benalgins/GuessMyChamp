@@ -112,25 +112,38 @@ export default function ChampionEdit() {
 				<label htmlFor="championsPosition">
 					Which lane is the champion often played:
 				</label>
-				<input
-					type="text"
+				<select
 					id="championsPosition"
 					name="championsPosition"
-					placeholder="Champion's Lane"
 					value={championsPosition}
 					onChange={(e) => setChampionsPosition(e.target.value)}
 					required
-				/>
+				>
+					<option value="" disabled>
+						Select a lane
+					</option>
+					<option value="Top">Top</option>
+					<option value="Jungle">Jungle</option>
+					<option value="Mid">Mid</option>
+					<option value="Marksman">Marksman</option>
+					<option value="Support">Support</option>
+				</select>
 				<label htmlFor="championsGender">What gender is the champion:</label>
-				<input
-					type="text"
+				<select
 					id="championsGender"
 					name="championsGender"
-					placeholder="Champion's Gender"
 					value={championsGender}
 					onChange={(e) => setChampionsGender(e.target.value)}
 					required
-				/>
+				>
+					<option value="" disabled>
+						Select gender
+					</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Cosmic">Cosmic</option>
+					<option value="Demon">Demon</option>
+				</select>
 				<label htmlFor="championsYear">
 					What year was the champion originally released:
 				</label>
