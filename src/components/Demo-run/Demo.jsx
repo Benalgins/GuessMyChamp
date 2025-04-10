@@ -39,7 +39,7 @@ export default function Demo() {
 					gender: guess.gender === hiddenChampion.gender,
 					position: guess.position === hiddenChampion.position,
 					releaseYear: guess.releaseYear === hiddenChampion.releaseYear,
-					resource: guess.resource === hiddenChampion.releaseYear,
+					resource: guess.resource === hiddenChampion.resource,
 					range: guess.range === hiddenChampion.range,
 					region: guess.region === hiddenChampion.region,
 				},
