@@ -18,6 +18,10 @@
 		letter-spacing: 3.5px;
 	}
 }
+
+.about {
+	align-items: center;
+}
 .try-demo {
 	flex-direction: column;
 	align-items: center;
